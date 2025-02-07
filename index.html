@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Skills Audit</title>
+    <title>Skills Audit and Role Selection</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,11 +11,47 @@
     <div id="audit-form">
       </div>
 
-    <button onclick="submitAudit()">Submit</button>
+    <button onclick="submitAudit()">Submit Audit</button>
 
     <div id="results">
-        <h2>Results (Copy and paste these)</h2>
+        <h2>Audit Results (Copy and paste these)</h2>
         <pre id="result-text"></pre>
+    </div>
+
+    <h2>Role Selection</h2>
+    <p>Please select the role you are most interested in and provide your details:</p>
+
+    <form id="role-form">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="role">Role:</label>
+        <select id="role" name="role" required>
+            <option value="">Select a Role</option> 
+            <option value="Legal Career Consultant">Legal Career Consultant</option>
+            <option value="CV/Resume and Cover Letter Specialist">CV/Resume and Cover Letter Specialist</option>
+            <option value="LinkedIn Profile Optimizer">LinkedIn Profile Optimizer</option>
+            <option value="Interview Coach">Interview Coach</option>
+            <option value="Networking Strategist">Networking Strategist</option>
+            <option value="Webinar Coordinator/Facilitator">Webinar Coordinator/Facilitator</option>
+            <option value="Personal Branding & Online Presence Developer">Personal Branding & Online Presence Developer</option>
+            <option value="Salary Negotiation Coach">Salary Negotiation Coach</option>
+            <option value="Legal Industry Events Coordinator">Legal Industry Events Coordinator</option>
+            <option value="Legal Expert (Document Review)">Legal Expert (Document Review)</option>
+        </select><br><br>
+
+        <button type="button" onclick="submitRole()">Submit Role Selection</button>
+    </form>
+
+    <div id="role-results">
+        <h2>Role Selection Results (Copy and paste these)</h2>
+        <pre id="role-result-text"></pre>
     </div>
 
     <script src="script.js"></script>
