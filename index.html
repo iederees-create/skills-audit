@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Role Selection</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: inline-block;
+            width: 100px; /* Adjust as needed */
+            margin-bottom: 5px;
+        }
+
+        select, input[type="text"], input[type="email"] {
+            width: 200px; /* Adjust as needed */
+            margin-bottom: 10px;
+        }
+
+        button[type="submit"] {
+          padding: 8px 16px;
+          background-color: #4CAF50; /* Green */
+          color: white;
+          border: none;
+          cursor: pointer;
+        }
+    </style>
+</head>
+<body>
 
     <h2>Role Selection</h2>
     <p>Please select the role you are most interested in and provide your details:</p>
 
-    <form id="role-form">
+    <form action="https://formspree.io/f/mbldkkow" method="POST">
         <label for="firstName">First Name:</label>
         <input type="text" id="firstName" name="firstName" required><br><br>
 
@@ -16,7 +48,7 @@
 
         <label for="role">Role:</label>
         <select id="role" name="role" required>
-            <option value="">Select a Role</option> 
+            <option value="">Select a Role</option>
             <option value="Legal Career Consultant">Legal Career Consultant</option>
             <option value="CV/Resume and Cover Letter Specialist">CV/Resume and Cover Letter Specialist</option>
             <option value="LinkedIn Profile Optimizer">LinkedIn Profile Optimizer</option>
@@ -29,8 +61,8 @@
             <option value="Legal Expert (Document Review)">Legal Expert (Document Review)</option>
         </select><br><br>
 
-        <button type="button" onclick="submitRole()">Submit Role Selection</button>
+        <button type="submit">Submit Role Selection</button>
     </form>
 
-
+</body>
 </html>
